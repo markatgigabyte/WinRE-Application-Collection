@@ -1,0 +1,12 @@
+rem === HideRecoveryPartitions-UEFI.txt ===
+select disk 0
+select partition 1
+remove
+set id=de94bba4-06d1-4d40-a16a-bfd50179d6ac
+gpt attributes=0x8000000000000001
+select partition 5
+remove
+set id=ebd0a0a2-b9e5-4433-87c0-68b6b72699c7
+gpt attributes=0x0000000000000001
+list volume
+exit
