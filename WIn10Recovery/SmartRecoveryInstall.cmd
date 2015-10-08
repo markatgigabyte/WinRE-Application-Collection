@@ -13,8 +13,8 @@ mkdir r:\RecoveryImage
 copy %USBDISKVOL%\RecoveryImage\Install.wim r:\RecoveryImage
 
 
-OEMResetBtnSupport.cmd
-HWRecoveryBtnSupport.cmd
-CustomToolBtnSupport.cmd
+AddOEMResetBtnSupport.cmd
+AddHWRecoveryBtnSupport.cmd
+AddCustomToolBtnSupport.cmd
 
 
