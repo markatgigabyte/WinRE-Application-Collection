@@ -1,0 +1,2 @@
+
+diskpart /s 
