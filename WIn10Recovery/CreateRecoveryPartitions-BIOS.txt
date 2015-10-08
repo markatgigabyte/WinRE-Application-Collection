@@ -6,11 +6,14 @@ rem    Adjust the partition sizes to fill the drive
 rem    as necessary. ==
 select disk 0
 rem == 1. System partition ======================
+select part 1
 assign letter="S"
 active
 rem == 2. Windows partition =====================
-rem ==    b. Create space for the recovery image  
+select part 2
+rem ==    a. Create space for the recovery image  
 shrink minimum=15000
+rem ==    b. Prepare the Windows partition ====== 
 assign letter="C"
 rem == 3. Recovery image partition ==============
 create partition primary
