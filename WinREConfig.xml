@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- WinREConfig.xml -->
+<!-- Note: You can only add one custom tool to the Windows RE boot options menus. -->
 <Recovery>
    <RecoveryTools>
       <RelativeFilePath>OEMDiagnostics.exe</RelativeFilePath>
