@@ -4,7 +4,7 @@ rem    set up the drive and ecreate five partitions
 rem    for a UEFI/GPT-based PC.
 rem    Adjust the partition sizes to fill the drive
 rem    as necessary. ==
-select disk 0
+select disk $TARGETDISK$
 rem == 1. Windows RE tools partition ===============
 select part 1
 assign letter="T"
@@ -16,7 +16,7 @@ select part 3
 rem == 4. Windows partition ========================
 select part 4
 rem ==    a. Create space for the recovery image ===
-shrink minimum=15000
+shrink minimum=$RECOVERYPARTITIONSIZE$
 rem ==    b. Prepare the Windows partition ========= 
 assign letter="C"
 rem === 5. Recovery image partition ================
