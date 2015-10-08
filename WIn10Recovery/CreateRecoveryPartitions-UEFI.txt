@@ -4,15 +4,22 @@ rem    set up the drive and ecreate five partitions
 rem    for a UEFI/GPT-based PC.
 rem    Adjust the partition sizes to fill the drive
 rem    as necessary. ==
-rem == locate the target disk ==========
 select disk 0
-rem == locate the Windows partition ==========
+rem == 1. Windows RE tools partition ===============
+select part 1
+assign letter="T"
+rem == 2. System partition =========================
+select part 2
+assign letter="S"
+rem == 3. Microsoft Reserved (MSR) partition =======
 select part 3
-rem ==  shrink Windows partition size ===
+rem == 4. Windows partition ========================
+select part 4
+rem ==    a. Create space for the recovery image ===
 shrink minimum=15000
-rem ==  prepare the Windows partition ========= 
+rem ==    b. Prepare the Windows partition ========= 
 assign letter="C"
-rem === create Recovery image partition ================
+rem === 5. Recovery image partition ================
 create partition primary
 format quick fs=ntfs label="Recovery image"
 assign letter="R"
