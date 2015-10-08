@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ResetConfig.xml - UEFI version - UTF-8 File format-->
+   <Reset>
+      <Run Phase="BasicReset_BeforeImageApply">
+         <Path>SaveLogFiles.cmd</Path>
+         <Duration>4</Duration>
+      </Run>      
+      <Run Phase="BasicReset_AfterImageApply">
+         <Path>RetrieveLogFiles.cmd</Path>
+         <Duration>2</Duration>
+      </Run>
+      <Run Phase="FactoryReset_AfterDiskFormat">
+         <Path>CheckPartitions.exe</Path>
+         <Duration>2</Duration>
+      </Run>
+      <Run Phase="FactoryReset_AfterImageApply">
+         <Path>InstallApps.cmd</Path>
+         <Param>/allApps</Param>
+         <Duration>2</Duration>
+      </Run>
+    <SystemDisk>
+        <DiskpartScriptPath>ResetPartitions-UEFI.txt</DiskpartScriptPath>
+        <MinSize>75000</MinSize>
+        <WindowsREPartition>1</WindowsREPartition>
+        <WindowsREPath>Recovery\WindowsRE</WindowsREPath>
+        <OSPartition>4</OSPartition>
+        <RecoveryImagePartition>5</RecoveryImagePartition>
+        <RecoveryImagePath>RecoveryImage</RecoveryImagePath>
+        <RestoreFromIndex>1</RestoreFromIndex>
+        <RecoveryImageIndex>1</RecoveryImageIndex>
+    </SystemDisk>
+   </Reset>
