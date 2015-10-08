@@ -2,23 +2,23 @@
 <!-- ResetConfig.xml - BIOS version - UTF-8 File format-->
    <Reset>
       <Run Phase="BasicReset_BeforeImageApply">
-         <Path>BasicReset_BeforeImageApply.cmd</Path>
+         <Path>OEM\BasicReset_BeforeImageApply.cmd</Path>
          <Duration>4</Duration>
       </Run>      
       <Run Phase="BasicReset_AfterImageApply">
-         <Path>BasicReset_AfterImageApply.cmd</Path>
+         <Path>OEM\BasicReset_AfterImageApply.cmd</Path>
          <Duration>2</Duration>
       </Run>
       <Run Phase="FactoryReset_AfterDiskFormat">
-         <Path>FactoryReset_AfterDiskFormat.cmd</Path>
+         <Path>OEM\FactoryReset_AfterDiskFormat.cmd</Path>
          <Duration>2</Duration>
       </Run>
       <Run Phase="FactoryReset_AfterImageApply">
-         <Path>FactoryReset_AfterImageApply.cmd</Path>
+         <Path>OEM\FactoryReset_AfterImageApply.cmd</Path>
          <Duration>2</Duration>
       </Run>
     <SystemDisk>
-        <DiskpartScriptPath>ResetPartitions-BIOS.txt</DiskpartScriptPath>
+        <DiskpartScriptPath>OEM\ResetPartitions-BIOS.txt</DiskpartScriptPath>
         <MinSize>75000</MinSize>
         <WindowsREPartition>1</WindowsREPartition>
         <WindowsREPath>Recovery\WindowsRE</WindowsREPath>
