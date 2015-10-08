@@ -45,9 +45,6 @@ bcdedit /store S:\BCD /set {11111111-1111-1111-1111-111111111111} ramdisksdidevi
 bcdedit /store S:\BCD /set {11111111-1111-1111-1111-111111111111} ramdisksdipath \Recovery\WindowsRE\boot.sdi
 
 bcdedit /store S:\BCD /create {22222222-2222-2222-2222-222222222222} /d "Windows Recovery Environment" /application osloader
-bcdedit /store S:\BCD /set {bootmgr} default {22222222-2222-2222-2222-222222222222}
-bcdedit /store S:\BCD /set {bootmgr} displayorder {22222222-2222-2222-2222-222222222222}
-
 bcdedit /store S:\BCD /set {22222222-2222-2222-2222-222222222222} device ramdisk=[T:]\Recovery\WindowsRE\winre.wim,{11111111-1111-1111-1111-111111111111}
 bcdedit /store S:\BCD /set {22222222-2222-2222-2222-222222222222} path \Windows\System32\winload.efi
 bcdedit /store S:\BCD /set {22222222-2222-2222-2222-222222222222} locale en-US
@@ -57,13 +54,20 @@ bcdedit /store S:\BCD /set {22222222-2222-2222-2222-222222222222} systemroot \Wi
 bcdedit /store S:\BCD /set {22222222-2222-2222-2222-222222222222} nx OptIn
 bcdedit /store S:\BCD /set {22222222-2222-2222-2222-222222222222} bootmenupolicy Standard
 bcdedit /store S:\BCD /set {22222222-2222-2222-2222-222222222222} winpe Yes
+
+bcdedit /store S:\BCD /set {bootmgr} default {22222222-2222-2222-2222-222222222222}
+bcdedit /store S:\BCD /set {bootmgr} displayorder {22222222-2222-2222-2222-222222222222}
+
 ```
 將新建立的 BCD 存放區移到次要開機路徑。
 ```
-xcopy /h S:\BCD* S:\EFI\Fabrikam\Boot\.
+xcopy /h S:\BCD* S:\EFI\Gigabyte\Boot\.
 del /a S:\BCD*
 ```
-在韌體開機順序清單結尾建立新的開機裝置項目。該項目應該指向：S:\EFI\Fabrikam\Boot\bootmgfw.efi。
+在韌體開機順序清單結尾建立新的開機裝置項目。該項目應該指向：S:\EFI\Gigabyte\Boot\bootmgfw.efi。
+
+(一般是執行S:\EFI\Microsoft\Boot\bootmgfw.efi)
+
 設定讓韌體在按下硬體按鈕時使用新建立的開機裝置項目。
 
 使用 DiskPart 隱藏 ESP 和 Windows RE 工具磁碟分割。
