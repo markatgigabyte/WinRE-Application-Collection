@@ -20,6 +20,11 @@
 
 [BCDEdit Command-Line Options](https://technet.microsoft.com/en-us/library/cc709667(v=ws.10).aspx?tduid=(58c435453cd07426fed3352357c471ee)(256380)(2459594)(XdSn0e3h3.k-4XfSWkslTLNNOItVf4UTvg)())
 
+[REAgentC Command-Line Options](https://technet.microsoft.com/en-us/library/hh825204.aspx?tduid=(58c435453cd07426fed3352357c471ee)(256380)(2459594)(XdSn0e3h3.k-yO9iz23.Ubi29FRauiXiqw)())
+
+[ResetConfig XML Reference](https://technet.microsoft.com/en-us/library/jj127002.aspx)
+
+[Windows RE Troubleshooting Features](https://technet.microsoft.com/en-us/library/hh824837.aspx)
 
 
 
