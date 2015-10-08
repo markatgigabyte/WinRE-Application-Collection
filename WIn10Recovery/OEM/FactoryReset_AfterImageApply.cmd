@@ -1,1 +1,2 @@
-rem FactoryReset_AfterImageApply.cmd for "Reset your PC"
+rem --FactoryReset_AfterImageApply.cmd--
+InstallApps.cmd /allApps
