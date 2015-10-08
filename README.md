@@ -4,6 +4,8 @@
 
 [Windows Deployment with the Windows ADK](https://technet.microsoft.com/en-us//library/hh824947.aspx?tduid=(58c435453cd07426fed3352357c471ee)(256380)(2459594)(XdSn0e3h3.k-gZRmy4UhJINyb7rVDnbRIw)())
 
-[Windows Automated Installation Kit for Windows 7](https://technet.microsoft.com/en-us//library/dd349343(v=ws.10).aspx?tduid=(58c435453cd07426fed3352357c471ee)(256380)(2459594)(XdSn0e3h3.k-gYDNGX7ZaNNdCMG0OJGRdg)())
+[Windows Automated Installation Kit(AIK) for Windows 7](https://technet.microsoft.com/en-us//library/dd349343(v=ws.10).aspx?tduid=(58c435453cd07426fed3352357c471ee)(256380)(2459594)(XdSn0e3h3.k-gYDNGX7ZaNNdCMG0OJGRdg)())
+
+[DiskPart Command-Line Options](https://technet.microsoft.com/en-us//library/cc766465(v=ws.10).aspx?tduid=(58c435453cd07426fed3352357c471ee)(256380)(2459594)(XdSn0e3h3.k-2HxIkiWgpNXt8.LMRnLeMg)())
 
 
