@@ -18,7 +18,7 @@ rem == 2. Windows partition =====================
 rem ==    a. Create the Windows partition =======
 create partition primary
 rem ==    b. Create space for the recovery image  
-shrink minimum=15000
+shrink minimum=$RECOVERYPARTIONSIZE$
 rem ==    c. Prepare the Windows partition ====== 
 format quick fs=ntfs label="Windows"
 assign letter="C"
