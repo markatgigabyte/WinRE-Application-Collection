@@ -3,7 +3,7 @@
 <!-- Note: You can only add one custom tool to the Windows RE boot options menus. -->
 <Recovery>
    <RecoveryTools>
-      <RelativeFilePath>OEMDiagnostics.exe</RelativeFilePath>
+      <RelativeFilePath>OEMCustomTool.exe</RelativeFilePath>
       <CommandLineParam>/param1 /param2</CommandLineParam>
    </RecoveryTools>
 </Recovery>
