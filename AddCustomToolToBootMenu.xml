@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- AddDiagnosticsToolToBootMenu.xml -->
+<!-- AddCustomToolToBootMenu.xml -->
 <!-- Note: You can only add one custom tool to the Windows RE boot options menus. -->
 <BootShell>
    <WinRETool locale="en-us">
