@@ -12,3 +12,6 @@
 
 [Customize Windows RE](https://technet.microsoft.com/en-us/library/hh825125.aspx?tduid=(58c435453cd07426fed3352357c471ee)(256380)(2459594)(XdSn0e3h3.k-BvBUqFQLDhSGZ7tWtBjPZg)())
 
+[Add a Custom Tool to the Windows RE Boot Options Menu](https://technet.microsoft.com/en-us/library/jj126994.aspx?tduid=(78c6fb09219353cbe43d1c6aaea0f5e2)(256380)(2459594)(XdSn0e3h3.k-qq0X8lcyvIY7O9PtISuYzQ)())
+
+
