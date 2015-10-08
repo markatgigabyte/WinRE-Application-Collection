@@ -4,18 +4,22 @@
       <Run Phase="BasicReset_BeforeImageApply">
          <Path>OEM\BasicReset_BeforeImageApply.cmd</Path>
          <Duration>4</Duration>
+         <Param>A</Param>
       </Run>      
       <Run Phase="BasicReset_AfterImageApply">
          <Path>OEM\BasicReset_AfterImageApply.cmd</Path>
          <Duration>2</Duration>
+         <Param>B</Param>
       </Run>
       <Run Phase="FactoryReset_AfterDiskFormat">
          <Path>OEM\FactoryReset_AfterDiskFormat.cmd</Path>
          <Duration>2</Duration>
+         <Param>C</Param>
       </Run>
       <Run Phase="FactoryReset_AfterImageApply">
          <Path>OEM\FactoryReset_AfterImageApply.cmd</Path>
          <Duration>2</Duration>
+         <Param>D</Param>
       </Run>
     <SystemDisk>
         <DiskpartScriptPath>OEM\ResetPartitions-BIOS.txt</DiskpartScriptPath>
