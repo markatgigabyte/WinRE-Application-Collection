@@ -1,2 +1,2 @@
 rem --FactoryReset_AfterDiskFormat.cmd--
-CheckPartitions.exe
+CheckPartitions.cmd
