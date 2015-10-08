@@ -10,4 +10,5 @@
 
 [BCDEdit Command-Line Options](https://technet.microsoft.com/en-us/library/cc709667(v=ws.10).aspx?tduid=(58c435453cd07426fed3352357c471ee)(256380)(2459594)(XdSn0e3h3.k-4XfSWkslTLNNOItVf4UTvg)())
 
+[Customize Windows RE](https://technet.microsoft.com/en-us/library/hh825125.aspx?tduid=(58c435453cd07426fed3352357c471ee)(256380)(2459594)(XdSn0e3h3.k-BvBUqFQLDhSGZ7tWtBjPZg)())
 
