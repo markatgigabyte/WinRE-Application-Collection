@@ -1,0 +1,21 @@
+rem == CreateRecoveryPartitions-BIOS.txt ==
+rem == These commands are used with DiskPart to
+rem    set up the drive and create three partitions
+rem    for a BIOS/MBR-based PC.
+rem    Adjust the partition sizes to fill the drive
+rem    as necessary. ==
+select disk 0
+rem == 1. System partition ======================
+assign letter="S"
+active
+rem == 2. Windows partition =====================
+rem ==    b. Create space for the recovery image  
+shrink minimum=15000
+assign letter="C"
+rem == 3. Recovery image partition ==============
+create partition primary
+format quick fs=ntfs label="Recovery image"
+assign letter="R" 
+set id=27
+list volume
+exit
