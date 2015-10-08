@@ -1,0 +1,22 @@
+rem == CreateRecoveryPartitions-UEFI.txt ==
+rem == These commands are used with DiskPart to
+rem    set up the drive and ecreate five partitions
+rem    for a UEFI/GPT-based PC.
+rem    Adjust the partition sizes to fill the drive
+rem    as necessary. ==
+rem == locate the target disk ==========
+select disk 0
+rem == locate the Windows partition ==========
+select part 3
+rem ==  shrink Windows partition size ===
+shrink minimum=15000
+rem ==  prepare the Windows partition ========= 
+assign letter="C"
+rem === create Recovery image partition ================
+create partition primary
+format quick fs=ntfs label="Recovery image"
+assign letter="R"
+set id="de94bba4-06d1-4d40-a16a-bfd50179d6ac"
+gpt attributes=0x8000000000000001
+list volume
+exit
