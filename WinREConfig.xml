@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- WinREConfig.xml -->
+<Recovery>
+   <RecoveryTools>
+      <RelativeFilePath>OEMDiagnostics.exe</RelativeFilePath>
+      <CommandLineParam>/param1 /param2</CommandLineParam>
+   </RecoveryTools>
+</Recovery>
