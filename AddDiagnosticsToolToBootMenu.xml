@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- AddDiagnosticsToolToBootMenu.xml -->
+<!-- Note: You can only add one custom tool to the Windows RE boot options menus. -->
+<BootShell>
+   <WinRETool locale="en-us">
+         <Name>Fabrikam Utility</Name>
+         <Description>Troubleshoot your Fabrikam PC</Description>
+   </WinRETool>
+   <WinRETool locale="fr-fr">
+      <Name>Utilité de Fabrikam</Name>
+      <Description>Dépannez votre PC de Fabrikam</Description>
+   </WinRETool>
+</BootShell>
