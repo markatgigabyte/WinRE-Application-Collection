@@ -13,19 +13,14 @@ copy %USBDISKVOL%\RecoveryImage\OEM\\BasicReset_AfterImageApply.cmd r:\RecoveryI
 copy %USBDISKVOL%\RecoveryImage\OEM\\BasicReset_BeforeImageApply.cmd r:\RecoveryImage\OEM
 copy %USBDISKVOL%\RecoveryImage\OEM\\FactoryReset_AfterDiskFormat.cmd.cmd r:\RecoveryImage\OEM
 copy %USBDISKVOL%\RecoveryImage\OEM\\FactoryReset_AfterImageApply.cmd r:\RecoveryImage\OEM
-rem OEM\B
-asicReset_AfterImageApply.cmd,
-rem OEM\BasicReset_BeforeImageApply.cmd
-rem OEM\FactoryReset_AfterDiskFormat.cmd
-rem OEM\FactoryReset_AfterImageApply.cmd
 
-rem Step3: create Resetconfig.xml 
+
 copy  %USBDISKVOL%\RecoveryImage\OEM\Resetconfig-%TARGETOSMODE%.xml r:\RecoveryImage\Resetconfig.xml
 
+copy %USBDISKVOL%\RecoveryImage\OEM\\ResetPartitions-BIOS.txt r:\RecoveryImage\OEM
+copy %USBDISKVOL%\RecoveryImage\OEM\\ResetPartitions-UEFI.txt r:\RecoveryImage\OEM
 
 
-rem ResetPartitions-BIOS.txt
-rem ResetPartitions-UEFI.txt
 
 
 
