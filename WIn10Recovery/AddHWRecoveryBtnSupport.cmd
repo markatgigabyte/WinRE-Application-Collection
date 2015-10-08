@@ -1,4 +1,4 @@
-rem AddHWRecoveryBtnSupport.cmd
+rem --AddHWRecoveryBtnSupport.cmd--
 rem Create a folder on the system partition to hold boot files for the secondary boot path.
 mkdir S:\EFI\Fabrikam
 rem Copy a set of boot files from the \EFI\Microsoft folder to the new folder.
