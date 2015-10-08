@@ -5,7 +5,7 @@ rem    for a BIOS/MBR-based PC.
 rem    Adjust the partition sizes to fill the drive
 rem    as necessary. ==
 select disk 0
-rem == 1. System partition ======================
+rem == 1. System (ESP) partition ======================
 select part 1
 assign letter="S"
 active
