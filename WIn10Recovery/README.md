@@ -10,7 +10,7 @@
 3.加入一鍵reset 功能
 
 
-
+BasicReset_BeforeImageApply
 
 
 
