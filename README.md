@@ -14,4 +14,8 @@
 
 [Add a Custom Tool to the Windows RE Boot Options Menu](https://technet.microsoft.com/en-us/library/jj126994.aspx?tduid=(78c6fb09219353cbe43d1c6aaea0f5e2)(256380)(2459594)(XdSn0e3h3.k-qq0X8lcyvIY7O9PtISuYzQ)())
 
+[Add a Hardware Recovery Button to Start Windows RE](https://technet.microsoft.com/en-us/library/jj631607.aspx)
+
+
+
 
