@@ -1,4 +1,4 @@
-rem SmartRecoveryInstall.cmd
+rem ---SmartRecoveryInstall.cmd---
 set TARGETDISK=0
 set RECOVERYPARTIONSIZE=15000
 set TARGETOSMODE="UEFI"
