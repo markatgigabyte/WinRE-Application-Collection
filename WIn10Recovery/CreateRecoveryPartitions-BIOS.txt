@@ -4,7 +4,7 @@ rem    set up the drive and create three partitions
 rem    for a BIOS/MBR-based PC.
 rem    Adjust the partition sizes to fill the drive
 rem    as necessary. ==
-select disk 0
+select disk $TARGETDISK$
 rem == 1. System (ESP) partition ======================
 select part 1
 assign letter="S"
@@ -12,7 +12,7 @@ active
 rem == 2. Windows partition =====================
 select part 2
 rem ==    a. Create space for the recovery image  
-shrink minimum=15000
+shrink minimum=$RECOVERYPARTITIONSIZE$
 rem ==    b. Prepare the Windows partition ====== 
 assign letter="C"
 rem == 3. Recovery image partition ==============
