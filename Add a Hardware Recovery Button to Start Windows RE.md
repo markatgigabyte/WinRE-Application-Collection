@@ -48,15 +48,15 @@ bcdedit /store S:\BCD /create {22222222-2222-2222-2222-222222222222} /d "Windows
 bcdedit /store S:\BCD /set {bootmgr} default {22222222-2222-2222-2222-222222222222}
 bcdedit /store S:\BCD /set {bootmgr} displayorder {22222222-2222-2222-2222-222222222222}
 
-bcdedit /store S:\BCD /set {default} device ramdisk=[T:]\Recovery\WindowsRE\winre.wim,{11111111-1111-1111-1111-111111111111}
-bcdedit /store S:\BCD /set {default} path \Windows\System32\winload.efi
-bcdedit /store S:\BCD /set {default} locale en-US
-bcdedit /store S:\BCD /set {default} displaymessage "Recovery"
-bcdedit /store S:\BCD /set {default} osdevice ramdisk=[T:]\Recovery\WindowsRE\winre.wim,{11111111-1111-1111-1111-111111111111}
-bcdedit /store S:\BCD /set {default} systemroot \Windows
-bcdedit /store S:\BCD /set {default} nx OptIn
-bcdedit /store S:\BCD /set {default} bootmenupolicy Standard
-bcdedit /store S:\BCD /set {default} winpe Yes
+bcdedit /store S:\BCD /set {22222222-2222-2222-2222-222222222222} device ramdisk=[T:]\Recovery\WindowsRE\winre.wim,{11111111-1111-1111-1111-111111111111}
+bcdedit /store S:\BCD /set {22222222-2222-2222-2222-222222222222} path \Windows\System32\winload.efi
+bcdedit /store S:\BCD /set {22222222-2222-2222-2222-222222222222} locale en-US
+bcdedit /store S:\BCD /set {22222222-2222-2222-2222-222222222222} displaymessage "Recovery"
+bcdedit /store S:\BCD /set {22222222-2222-2222-2222-222222222222} osdevice ramdisk=[T:]\Recovery\WindowsRE\winre.wim,{11111111-1111-1111-1111-111111111111}
+bcdedit /store S:\BCD /set {22222222-2222-2222-2222-222222222222} systemroot \Windows
+bcdedit /store S:\BCD /set {22222222-2222-2222-2222-222222222222} nx OptIn
+bcdedit /store S:\BCD /set {22222222-2222-2222-2222-222222222222} bootmenupolicy Standard
+bcdedit /store S:\BCD /set {22222222-2222-2222-2222-222222222222} winpe Yes
 ```
 將新建立的 BCD 存放區移到次要開機路徑。
 ```
