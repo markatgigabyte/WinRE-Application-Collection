@@ -1,0 +1,31 @@
+rem === ResetPartitions-BIOS.txt ===
+rem == These commands are used with DiskPart to
+rem    reset the drive and create three partitions
+rem    for a BIOS/MBR-based PC.
+rem    Adjust the partition sizes to fill the drive
+rem    as necessary. ==
+rem == The differences between this file and
+rem    CreatePartitions-BIOS.txt
+rem    are noted in parenthesis.
+rem       (NOT USED: select disk 0 )
+rem       (NOT USED: clean )
+rem == 1. System partition ======================
+create partition primary size=350
+format quick fs=ntfs label="System"
+assign letter="S"
+active
+rem == 2. Windows partition =====================
+rem ==    a. Create the Windows partition =======
+create partition primary
+rem ==    b. Create space for the recovery image  
+shrink minimum=15000
+rem ==    c. Prepare the Windows partition ====== 
+format quick fs=ntfs label="Windows"
+assign letter="C"
+rem == 3. Recovery image partition ==============
+create partition primary
+format quick fs=ntfs label="Recovery image"
+assign letter="R" 
+set id=27
+list volume
+exit
