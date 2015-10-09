@@ -26,5 +26,8 @@
 
 [Windows RE Troubleshooting Features](https://technet.microsoft.com/en-us/library/hh824837.aspx)
 
+###WinPE
+
+[Windows Assessment and Deployment Kit (Windows ADK)](https://msdn.microsoft.com/en-us/library/windows/hardware/hh825420.aspx?tduid=(78c6fb09219353cbe43d1c6aaea0f5e2)(256380)(2459594)(XdSn0e3h3.k-JOXVcIVvkHsVsOOlnm4p9w)())
 
 
