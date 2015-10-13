@@ -21,6 +21,12 @@ rem Add a Hardware Recovery Button to Start Windows RE
 rem Add a Custom Tool to the Windows RE Boot Options Menu
 %USBDISKVOL%\OEM\AddCustomToolBtnSupport.cmd
 
+rem Register your custom Windows RE tools image:
+rem REAGENTC.exe /disable
+rem copy %USBDISKVOL%\OEM\winre.wim ????????????
+rem REAGENTC.EXE /setreimage /path r:\Recovery\WindowsRE
+rem REAGENTC.exe /enable
+
 rem Hide Recovery & WinRE Partition
 %USBDISKVOL%\OEM\batch\BatchSubstitute.bat "$TARGETDISK$" %TARGETDISK% %USBDISKVOL%\OEM\HideRecoveryPartitions-%TARGETOSMODE%.txt > HideRecoveryPartitions.scp
 diskpart /s HideRecoveryPartitions.scp
