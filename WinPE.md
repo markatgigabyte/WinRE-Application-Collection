@@ -63,7 +63,7 @@ HKEY_LOCAL_MACHINE
 ```
 Winpeshl.exe searches for a file called Winpeshl.ini. If the file does not exist, Winpeshl.exe starts a Cmd.exe process that executes the Startnet.cmd script. If Winpeshl.ini does exist and it contains apps to launch, these apps are executed instead of Cmd.exe.
 
-###Wpeinit.exe, wpeutil.exe, and wpeutil.dll
+####Wpeinit.exe, wpeutil.exe, and wpeutil.dll
 Startnet.cmd starts Wpeinit.exe. Wpeinit.exe installs Plug and Play devices, processes Unattend.xml settings, and loads network resources.
 Wpeinit.exe installs Plug and Play (PnP) devices, starting the networking stack, and processing Unattend.xml settings when Windows PE starts. For more information, see Wpeinit and Startnet.cmd: Using WinPE startup scripts.
 Networking can be started at any time by running either by allowing Wpeinit.exe to run when Windows PE starts, or by running the Wpeutil Command-Line Options command.
