@@ -23,6 +23,52 @@ Dism /Mount-Image /ImageFile:"C:\WinPE_amd64\media\sources\boot.wim" /index:1 /M
 Dism /Unmount-Image /MountDir:"C:\WinPE_amd64\mount" /commit
 MakeWinPEMedia /UFD C:\WinPE_amd64 F:
 ```
+####WinPE: Adding PowerShell support to Windows PE
+```
+Dism /Mount-Image /ImageFile:"C:\WinPE_amd64_PS\media\sources\boot.wim" /Index:1 /MountDir:"C:\WinPE_amd64_PS\mount"
+
+Dism /Add-Package /Image:"C:\WinPE_amd64_PS\mount" /PackagePath:"C:\Program Files\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-WMI.cab"
+
+Dism /Add-Package /Image:"C:\WinPE_amd64_PS\mount" /PackagePath:"C:\Program Files\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-WMI_en-us.cab"
+
+Dism /Add-Package /Image:"C:\WinPE_amd64_PS\mount" /PackagePath:"C:\Program Files\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-NetFX.cab"
+
+Dism /Add-Package /Image:"C:\WinPE_amd64_PS\mount" /PackagePath:"C:\Program Files\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-NetFX_en-us.cab"
+
+Dism /Add-Package /Image:"C:\WinPE_amd64_PS\mount" /PackagePath:"C:\Program Files\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-Scripting.cab"
+
+Dism /Add-Package /Image:"C:\WinPE_amd64_PS\mount" /PackagePath:"C:\Program Files\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-Scripting_en-us.cab"
+
+Dism /Add-Package /Image:"C:\WinPE_amd64_PS\mount" /PackagePath:"C:\Program Files\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-PowerShell.cab"
+
+Dism /Add-Package /Image:"C:\WinPE_amd64_PS\mount" /PackagePath:"C:\Program Files\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-PowerShell_en-us.cab"
+
+Dism /Add-Package /Image:"C:\WinPE_amd64_PS\mount" /PackagePath:"C:\Program Files\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-StorageWMI.cab"
+
+Dism /Add-Package /Image:"C:\WinPE_amd64_PS\mount" /PackagePath:"C:\Program Files\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-StorageWMI_en-us.cab"
+
+Dism /Add-Package /Image:"C:\WinPE_amd64_PS\mount" /PackagePath:"C:\Program Files\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-DismCmdlets.cab"
+
+Dism /Add-Package /Image:"C:\WinPE_amd64_PS\mount" /PackagePath:"C:\Program Files\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-DismCmdlets_en-us.cab"
+
+Dism /Unmount-Image /MountDir:C:\WinPE_amd64_PS\mount /Commit
+```
+####Winpeshl.exe/Winpeshl.ini or cmd.exe/startnet.cmd
+By default, Winpeshl.exe is the first process run when Windows PE is booted. This is specified by the following registry value of type REG_SZ.
+```
+HKEY_LOCAL_MACHINE
+   System
+      Setup
+         CmdLine
+```
+Winpeshl.exe searches for a file called Winpeshl.ini. If the file does not exist, Winpeshl.exe starts a Cmd.exe process that executes the Startnet.cmd script. If Winpeshl.ini does exist and it contains apps to launch, these apps are executed instead of Cmd.exe.
+
+###Wpeinit.exe, wpeutil.exe, and wpeutil.dll
+Startnet.cmd starts Wpeinit.exe. Wpeinit.exe installs Plug and Play devices, processes Unattend.xml settings, and loads network resources.
+Wpeinit.exe installs Plug and Play (PnP) devices, starting the networking stack, and processing Unattend.xml settings when Windows PE starts. For more information, see Wpeinit and Startnet.cmd: Using WinPE startup scripts.
+Networking can be started at any time by running either by allowing Wpeinit.exe to run when Windows PE starts, or by running the Wpeutil Command-Line Options command.
+Customized shell apps can call directly into Wpeutil.dll with the LoadLibrary and GetProcAddress functions. For related information, see INFO: Alternatives to Using GetProcAddress() With LoadLibrary().
+
 
 ####WinPE: Create USB Bootable drive
 ```
