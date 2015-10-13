@@ -16,6 +16,14 @@ for /f "tokens=2* delims=  " %%A in ('reg query HKLM\System\CurrentControlSet\Co
 if %Firmware%==0x1 echo The PC is booted in BIOS mode.
 if %Firmware%==0x2 echo The PC is booted in UEFI mode.
 ```
+####WinPE: Mount and Customize
+```
+Dism /Mount-Image /ImageFile:"C:\WinPE_amd64\media\sources\boot.wim" /index:1 /MountDir:"C:\WinPE_amd64\mount"
+//Add customizations
+Dism /Unmount-Image /MountDir:"C:\WinPE_amd64\mount" /commit
+MakeWinPEMedia /UFD C:\WinPE_amd64 F:
+```
+
 ####WinPE: Create USB Bootable drive
 ```
 diskpart
