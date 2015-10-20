@@ -12,7 +12,7 @@ C: Windows
 
 
 
-註: BIOS Mode時 , WinRE Tools至於 C:\Recovery目錄下
+註: BIOS Mode時 , WinRE Tools置於 C:\Recovery目錄下
 
 ```
 diskpart
